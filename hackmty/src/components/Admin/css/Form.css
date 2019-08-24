@@ -1,0 +1,47 @@
+#form {
+  display: flex;
+  padding: 2.5rem;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+#form input {
+  margin: 0.1rem 0rem;
+  border-radius: 0.2rem;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.644);
+  padding: 0.1rem 0.4rem;
+}
+div {
+  border: 0px solid;
+}
+#fields {
+  display: flex;
+  max-height: 80vh;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+
+  flex-direction: column;
+}
+#fields input {
+  margin: 0rem 0rem;
+  padding: 0rem;
+  max-width: 95%;
+}
+input::placeholder {
+  margin: 2rem;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 0;
+}
+.input-div span {
+  margin: 0rem 0rem;
+}
+.input-div * {
+  width: 100%;
+}
