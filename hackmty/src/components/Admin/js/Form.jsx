@@ -48,7 +48,7 @@ class Form extends Component {
     let form = fields.map(field => {
       return (
         <div className="input-div">
-          <span>{field}</span>
+          <h1>{field}</h1>
           <input
             name={field}
             defaultValue={this.state.fields[field] || ""}
@@ -60,9 +60,12 @@ class Form extends Component {
     });
     return (
       <div id="form">
-        <h4 style={{ margin: "0rem 1rem" }}>{header}</h4>
+        <h1 style={{}}>{header}</h1>
         <div id="fields"> {form}</div>
-        <button className="payment" onClick={() => this.onSubmit()}>
+        <button
+          className=" btn btn-purple-outline btt"
+          onClick={() => this.onSubmit()}
+        >
           Guardar
         </button>
       </div>

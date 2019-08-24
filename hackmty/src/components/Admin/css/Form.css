@@ -7,14 +7,16 @@
 }
 
 #form input {
-  margin: 0.1rem 0rem;
-  border-radius: 0.2rem;
+  margin: 0.5rem 0rem !important;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
   border: 1px solid;
-  border-color: rgba(0, 0, 0, 0.644);
-  padding: 0.1rem 0.4rem;
+  border-color: rgba(179, 179, 179, 0.644);
+  padding: 1rem 2rem !important;
 }
-div {
-  border: 0px solid;
+
+.btt {
+  margin: 1rem 0rem !important;
 }
 #fields {
   display: flex;
@@ -24,11 +26,7 @@ div {
 
   flex-direction: column;
 }
-#fields input {
-  margin: 0rem 0rem;
-  padding: 0rem;
-  max-width: 95%;
-}
+
 input::placeholder {
   margin: 2rem;
 }

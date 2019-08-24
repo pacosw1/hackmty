@@ -1,0 +1,24 @@
+#sidebar {
+  display: flex;
+  height: 100vh;
+
+  display: block;
+  background-color: white;
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  min-width: 0%;
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-radius: 0.2rem;
+  border-color: rgb(212, 212, 212);
+  transition: width 1s !important;
+}
+#sidebar p {
+  margin: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  #sidebar {
+    width: 100%;
+  }
+}

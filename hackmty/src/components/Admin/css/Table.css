@@ -1,0 +1,51 @@
+.t {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem !important;
+  margin: 2rem;
+  border-radius: 0.5çrem;
+  width: 100%;
+}
+.delete-button {
+  color: white !important;
+  width: 2.5rem !important;
+  background-color: rgb(194, 23, 23) !important;
+}
+
+table {
+  width: 100%;
+  margin: 0;
+
+  margin-right: 10rem;
+  padding: 2rem;
+}
+
+#tables {
+  overflow-y: scroll;
+  border: 1px solid;
+}
+.t button {
+  color: white !important;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 0.2rem !important;
+  border: none;
+  margin: 1rem 0rem !important;
+  background-color: #000000;
+}
+/* button {
+  color: white;
+  height: 2rem;
+  border-radius: 0.2rem !important;
+  border: none;
+  background-color: #000000;
+} */
+
+.table-item:hover {
+  background-color: rgba(133, 133, 133, 0.178);
+}
+
+.table-item {
+  align-content: baseline !important;
+  align-items: center !important;
+}
