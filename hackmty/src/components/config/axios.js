@@ -8,12 +8,6 @@ exports.saveImages = formData =>
     .then(res => res.data.data)
     .catch(err => err.message);
 
-exports.processPayment = (card, total) =>
-  axios
-    .post("payments", { card: card, total: total })
-    .then(res => res.data)
-    .catch(err => err.message);
-//TODO create cart
 
 exports.getData = route =>
   axios
