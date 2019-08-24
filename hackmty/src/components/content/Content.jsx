@@ -25,7 +25,9 @@ class Content extends Component {
             />
           )}
         />
-        <Route path="login" render={() => <Login />} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/" exact component={Dashboard} />
+
         <Route
           exact
           path="/manage/catalog/egresos/get/:id"
@@ -49,7 +51,6 @@ class Content extends Component {
             />
           )}
         />
-
         {/* <Login /> */}
       </div>
     );

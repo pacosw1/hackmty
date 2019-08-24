@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Navbar.css";
+import { NavLink } from "react-router-dom";
 
 class Navbar extends Component {
   state = {};
@@ -13,7 +14,9 @@ class Navbar extends Component {
           </button>
         </div>
         <div id="right">
-          <button class="btn btn-purple">Iniciar Sesion</button>
+          <NavLink to="/login">
+            <button class="btn btn-purple">Iniciar Sesion</button>
+          </NavLink>
         </div>
       </div>
     );

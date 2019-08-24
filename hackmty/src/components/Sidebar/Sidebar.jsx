@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./Sidebar.css";
+import { NavLink } from "react-router-dom/cjs/react-router-dom";
 class Sidebar extends Component {
   state = {};
   render() {
-    let { toggle } = this.props;
+    let { toggle, onMenu } = this.props;
     let widthVal = "",
       display = "";
     if (toggle) {
@@ -16,10 +17,19 @@ class Sidebar extends Component {
     console.log(widthVal);
     return (
       <div id="sidebar" style={{ width: widthVal, visibility: display }}>
-        <p>Ingresos</p>
-        <p>Gastos</p>
+        <NavLink to="/" onClick={() => onMenu()}>
+          <p>Dashboard</p>
+        </NavLink>
+        <NavLink to="/ingresos" onClick={() => onMenu()}>
+          <p>Ingresos</p>
+        </NavLink>
+        <NavLink to="/egresos" onClick={() => onMenu()}>
+          <p>Egresos</p>
+        </NavLink>
         <p>Admin</p>
-        <p>Perfil</p>
+        <NavLink to="/profile" onClick={() => onMenu()}>
+          <p>Perfil</p>
+        </NavLink>
       </div>
     );
   }

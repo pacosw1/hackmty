@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar onMenu={this.toggleMenu} />
-        <Sidebar toggle={this.state.sidebarToggle} />
+        <Sidebar toggle={this.state.sidebarToggle} onMenu={this.toggleMenu} />
         <Content />
       </div>
     );
