@@ -15,6 +15,12 @@
 #header div {
   width: 33.33%;
   margin: 1rem 0.2rem;
+  transition: 0.5s;
+}
+
+#header div:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 @media only screen and (max-width: 500px) {
@@ -23,6 +29,7 @@
     flex-direction: column;
     order: 1;
   }
+
   #header div {
     order: 3;
     margin: 0.2rem;

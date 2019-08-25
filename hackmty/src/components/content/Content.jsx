@@ -7,11 +7,13 @@ import { Route } from "react-router-dom";
 import Catalogo from "../Admin/js/Catalogo";
 import Form from "../Admin/js/Form";
 import Chart from "../charts/Chart";
+import Ingresos from "../Admin/js/Ingresos";
 let fields = require("../config/fields");
 
 class Content extends Component {
   state = {};
   render() {
+    let { chartData, income, cost, profit } = this.props;
     return (
       <div id="content-div">
         <Sidebar />
@@ -26,8 +28,28 @@ class Content extends Component {
             />
           )}
         />
+
         <Route path="/login" exact component={Login} />
-        <Route path="/" exact component={Dashboard} />
+        <Route
+          path="/"
+          exact
+          render={props => (
+            <Dashboard
+              chartData={chartData}
+              profit={profit}
+              cost={cost}
+              income={income}
+            />
+          )}
+        />
+        <Route
+          path="/ingresos"
+          exact
+          render={props => (
+            <Ingresos header={"Ingresos"} income={income} {...props} />
+          )}
+        />
+
         <Route path="/charts" exact component={Chart} />
         <Route
           exact
