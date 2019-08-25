@@ -5,8 +5,18 @@ import { __values } from "tslib";
 import { NavLink } from "react-router-dom/cjs/react-router-dom";
 let _ = require("lodash");
 let axios = require("../config/axios");
+import {Button} from "react-native";
+import {Link} from "react-router";
+
 
 class Dashboard extends Component {
+  constructor() {
+    this.routeChange = this.routeChange.bind(this)
+  }
+  
+  routeChange() {
+    let path = `Ing`
+  }
   state = {
     costs: 0
   };
@@ -36,6 +46,26 @@ class Dashboard extends Component {
           style={{ width: "100%", margin: "0 1rem" }}
         >
           <Chart data={chartData} />
+        </div>
+
+
+        <div>
+            <Button
+            Link to={"/ingresos"}
+            title="Ir a ver Ingresos"
+            color="#7264C9"
+            >
+              Ir a ver Ingresos
+            </Button>
+
+            <Button
+            Link to={"/egresos"}
+            title="Ir a ver Egresos"
+            color="#7264C9" 
+            >
+              Ir a ver Egresos
+            </Button>
+
         </div>
       </div>
     );
