@@ -14,16 +14,10 @@ class Ingresos extends Component {
       <div id="ingresos">
         <Card
           header={income}
-          description={"Ingresos"}
+          description={"Egresos"}
           textColor="#00DCB8"
           style={{ marginTop: "2rem !important" }}
         />
-        <div
-          className="card-shadow"
-          style={{ width: "100%", margin: "0 1rem" }}
-        >
-          <Egresos />
-        </div>
 
         <Card
           header={"Producto mas caro"}
@@ -40,6 +34,15 @@ class Ingresos extends Component {
           description="Producto con Id 12323423"
           textColor="#00DCB8"
         />
+
+        <div
+          className="card-shadow"
+          style={{ width: "100%", margin: "0 1rem" }}
+        >
+          <Egresos />
+        </div>
+
+
       </div>
     );
   }
