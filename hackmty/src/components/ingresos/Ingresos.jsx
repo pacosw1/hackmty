@@ -52,7 +52,7 @@ class Ingresos extends Component {
                     <th>Nombre Cliente</th>
                     <th>ID producto</th>
                     <th>Cantidad</th>
-                    <th><button className="btn btn-danger btn-sm">Delete </button></th>
+                    <th><button className="btn btn-danger btn-sm">Borrar </button></th>
                 </tr>
             </thead>
             <tbody>
@@ -70,7 +70,7 @@ class Ingresos extends Component {
                 <td>{ingreso.productID}</td>
                 <td>{ingreso.quantity}</td>
 
-                <th><button onClick={() => this.handleDelete(ingreso)}  className="btn btn-danger btn-sm">Delete </button></th>
+                <th><button onClick={() => this.handleDelete(ingreso)}  className="btn btn-danger btn-sm">Borrar </button></th>
             </tr>
                 ))}
                 

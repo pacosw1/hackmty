@@ -7,6 +7,7 @@ import { Route } from "react-router-dom";
 import Catalogo from "../Admin/js/Catalogo";
 import Form from "../Admin/js/Form";
 import Ingresos from "../ingresos/Ingresos";
+import Egresos from "../costos/egresos";
 let fields = require("../config/fields");
 
 class Content extends Component {
@@ -29,6 +30,7 @@ class Content extends Component {
         <Route path="/login" exact component={Login} />
         <Route path="/" exact component={Dashboard} />
         <Route path="/ingresos" exact component={Ingresos} />
+        <Route pathh="/egresos" exact component={Egresos}/>
 
         <Route
           exact
