@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import PieChartJS from "../../charts/PieChartJS";
 import "../css/Ingresos.css";
 import { Card } from "../../Dashboard/Dashboard";
-import Egresos from "./costos/egresos"
-
+import Egresos from "./costos/egresos";
+import upload_gasto from "../../upload/upload_gasto";
 
 class Ingresos extends Component {
   state = {};
@@ -12,6 +12,9 @@ class Ingresos extends Component {
     let { header, income } = this.props;
     return (
       <div id="ingresos">
+        <Card>
+          <upload_gasto />
+        </Card>
         <Card
           header={income}
           description={"Ingresos"}
