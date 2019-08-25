@@ -8,6 +8,7 @@ import Catalogo from "../Admin/js/Catalogo";
 import Form from "../Admin/js/Form";
 import Chart from "../charts/Chart";
 import Ingresos from "../Admin/js/Ingresos";
+import FormIng from "../Admin/js/FormIng";
 let fields = require("../config/fields");
 
 class Content extends Component {
@@ -42,11 +43,23 @@ class Content extends Component {
             />
           )}
         />
+
         <Route
           path="/ingresos"
           exact
           render={props => (
             <Ingresos header={"Ingresos"} income={income} {...props} />
+          )}
+        />
+
+        <Route
+          path="/ingresos/catalogo"
+          exact
+          render={props => (
+            <FormIng
+              header={"Crear Nuevo Ingreso"}
+              fields={["RFC", "Cliente", "Animal"]}
+            />
           )}
         />
 

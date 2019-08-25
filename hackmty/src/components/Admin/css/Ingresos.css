@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   margin: 0rem 2rem;
-  margin-top: 2rem;
 }
 .header {
   font-size: 2rem;
@@ -14,4 +13,7 @@
 #ingresos .card-shadow {
   width: 100%;
   margin: 0.5rem 0rem !important;
+}
+#ingresos button {
+  margin: 1rem !important;
 }

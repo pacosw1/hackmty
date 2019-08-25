@@ -1,0 +1,20 @@
+#form-data {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 4rem;
+}
+
+#form-data input {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  margin: 1rem 0rem;
+}
+
+#form-data .card-shadow {
+  margin: 0rem;
+  margin-top: 2rem;
+  color: white;
+  background-color: #8a79f7 !important;
+  width: 100%;
+}

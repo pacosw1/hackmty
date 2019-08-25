@@ -9,12 +9,34 @@ class Ingresos extends Component {
     let { header, income } = this.props;
     return (
       <div id="ingresos">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignSelf: "flex-start"
+          }}
+        >
+          <button
+            style={{ alignSelf: "flex-start", margin: "2rem 0rem" }}
+            class="btn btn-green"
+          >
+            Añadir Ingreso
+          </button>
+
+          <button
+            style={{ alignSelf: "flex-start", margin: "2rem 0rem" }}
+            class="btn btn-purple-outline"
+          >
+            Ir al Catalogo
+          </button>
+        </div>
         <Card
           header={income}
           description={"Ingresos"}
           textColor="#00DCB8"
           style={{ marginTop: "2rem !important" }}
         />
+
         <div
           className="card-shadow"
           style={{ width: "100%", margin: "0 1rem" }}
