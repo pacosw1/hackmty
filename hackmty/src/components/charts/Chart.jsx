@@ -14,7 +14,7 @@ export default class Chart extends PureComponent {
     let { data } = this.props;
 
     return (
-      <ResponsiveContainer width="100%" height={360}>
+      <ResponsiveContainer width="100%" height={300}>
         <AreaChart
           id="chart-js"
           fontSize=".6rem"
@@ -31,6 +31,7 @@ export default class Chart extends PureComponent {
 
           <YAxis
             dataKey="Ingresos"
+            domain={[4000000, 15000000]}
             tickFormatter={tick => {
               return tick.toLocaleString();
             }}
@@ -41,14 +42,14 @@ export default class Chart extends PureComponent {
           <Area
             type="monotone"
             dataKey="Ingresos"
-            stroke="#00C2A2"
-            fill="#00C2A2"
+            stroke="#B8AAE9"
+            fill="#B8AAE9"
           />
           <Area
             type="monotone"
             dataKey="Gastos"
-            stroke="#FF6666"
-            fill="#FF6666"
+            stroke="#FFEDED"
+            fill="#FFEDED"
           />
         </AreaChart>
       </ResponsiveContainer>

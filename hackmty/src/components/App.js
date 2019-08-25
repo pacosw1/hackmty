@@ -15,69 +15,81 @@ class App extends Component {
     costs: []
   };
   async componentDidMount() {
-    let res = await axios.getData("TAF100112H1A/gastos/2019");
-    let incomeRes = await axios.getData("TAF100112H1A/ingresos/2019");
-    console.log(res.length);
+    // let res = await axios.getData("TAF100112H1A/gastos/2019");
+    // let incomeRes = await axios.getData("TAF100112H1A/ingresos/");
+    let graphData = await axios.getData("graphs/TAF100112H1A/2019");
+    // console.log(res.length);
 
-    let fix = res.map(record => {
-      record.cost = record.cost.replace(/,/g, ".");
-      record.cost = record.cost * record.quantity;
-      return _.pick(record, ["cost", "month"]);
-    });
-    let incomes = incomeRes.map(record => {
-      record.total = record.total.replace(/,/g, ".");
-      record.total = record.total * record.quantity;
-      return _.pick(record, ["total", "month"]);
-    });
+    // let fix = res.map(record => {
+    //   record.cost = record.cost.replace(/,/g, ".");
+    //   record.cost = record.cost * record.quantity;
+    //   return _.pick(record, ["cost", "month"]);
+    // });
+    // // let incomes = incomeRes.map(record => {
+    //   record.total = record.total.replace(/,/g, ".");
+    //   record.total = record.total * "1";
+    //   return _.pick(record, ["total", "month"]);
+    // });
 
-    let summedIncomes = _(incomes)
-      .groupBy("month")
-      .map((objs, key) => {
-        return {
-          month: key,
-          Ingresos: _.sumBy(objs, "total").toFixed(2)
-        };
-      })
-      .value();
-    let summed = _(fix)
-      .groupBy("month")
-      .map((objs, key) => {
-        return {
-          month: key,
-          Gastos: _.sumBy(objs, "cost").toFixed(2)
-        };
-      })
-      .value();
-    let sum = 0;
-    console.log(summed);
-
-    fix.forEach(record => {
-      sum += parseFloat(record.cost);
-    });
-    let incomeSum = 0;
-    incomes.forEach(record => {
-      incomeSum += parseFloat(record.total);
+    let countIncome = 0;
+    let countCost = 0;
+    let incomeRes = graphData.data.map(month => {
+      countCost += month.Gastos;
+      countIncome += month.Ingresos;
     });
 
-    incomeSum = incomeSum.toFixed(2);
-    sum = sum.toFixed(2);
+    console.log(countIncome);
+    // let summedIncomes = _(incomes)
+    //   .groupBy("month")
+    //   .map((objs, key) => {
+    //     return {
+    //       month: key,
+    //       Ingresos: _.sumBy(objs, "total").toFixed(2)
+    //     };
+    //   })
+    //   .value();
+    // let summed = _(fix)
+    //   .groupBy("month")
+    //   .map((objs, key) => {
+    //     return {
+    //       month: key,
+    //       Gastos: _.sumBy(objs, "cost").toFixed(2)
+    //     };
+    //   })
+    //   .value();
+    // let sum = 0;
+    // console.log(summed);
 
-    let profit = incomeSum - sum;
-    profit = parseFloat(profit).toLocaleString();
-    incomeSum = parseFloat(incomeSum).toLocaleString();
+    // fix.forEach(record => {
+    //   sum += parseFloat(record.cost);
+    // });
+    // let incomeSum = 0;
+    // incomes.forEach(record => {
+    //   incomeSum += parseFloat(record.total);
+    // });
 
-    sum = parseFloat(sum).toLocaleString();
+    // incomeSum = incomeSum.toFixed(2);
+    // sum = sum.toFixed(2);
 
-    let final = _.merge(summedIncomes, summed);
-    console.log(final);
+    // let profit = incomeSum - sum;
+    // profit = parseFloat(profit).toLocaleString();
+    // incomeSum = parseFloat(incomeSum).toLocaleString();
 
-    console.log(incomeSum);
+    let final = (
+      parseFloat(countIncome) - parseFloat(countCost)
+    ).toLocaleString();
+    countCost = parseFloat(countCost).toLocaleString();
+    countIncome = parseFloat(countIncome).toLocaleString();
+
+    // console.log(final);
+
+    // console.log(incomeSum);
 
     this.setState({
-      cost: sum,
-      profit: profit,
-      income: incomeSum,
-      chartData: final
+      cost: countCost,
+      profit: final,
+      income: countIncome,
+      chartData: graphData.data
     });
   }
 

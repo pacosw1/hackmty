@@ -28,8 +28,8 @@ class Dashboard extends Component {
         <div id="header">
           <Card header={profit} textColor="#04B49A" description="Ganancia" />
 
-          <Card header={income} description="Ingresos" textColor="#00DCB8" />
-          <Card header={cost} textColor="#FF4949" description="Gastos" />
+          <Card header={income} description="Ingresos" textColor="#574BA8" />
+          <Card header={cost} textColor="#8A79F7" description="Gastos" />
         </div>
         <div
           className="card-shadow"
