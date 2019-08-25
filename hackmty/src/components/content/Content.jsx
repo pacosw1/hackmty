@@ -8,7 +8,7 @@ import Catalogo from "../Admin/js/Catalogo";
 import Form from "../Admin/js/Form";
 import Chart from "../charts/Chart";
 import Ingresos from "../Admin/js/Ingresos";
-import Egresos from "../admin/js/Egresos";
+import Egresos from "../Admin/js/Egresos";
 let fields = require("../config/fields");
 
 class Content extends Component {
