@@ -42,7 +42,7 @@ export default class Chart extends PureComponent {
           <Area
             type="monotone"
             dataKey="Ingresos"
-            stroke="#B8AAE9"
+            stroke="#574BA8"
             fill="#B8AAE9"
           />
           <Area
