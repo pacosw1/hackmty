@@ -6,13 +6,15 @@ import Sidebar from "../Sidebar/Sidebar";
 import { Route } from "react-router-dom";
 import Catalogo from "../Admin/js/Catalogo";
 import Form from "../Admin/js/Form";
-import Ingresos from "../ingresos/Ingresos";
-import Egresos from "../costos/egresos";
+import Chart from "../charts/Chart";
+import Ingresos from "../Admin/js/Ingresos";
+import Egresos from "../admin/js/Egresos";
 let fields = require("../config/fields");
 
 class Content extends Component {
   state = {};
   render() {
+    let { chartData, income, cost, profit } = this.props;
     return (
       <div id="content-div">
         <Sidebar />
@@ -27,11 +29,37 @@ class Content extends Component {
             />
           )}
         />
-        <Route path="/login" exact component={Login} />
-        <Route path="/" exact component={Dashboard} />
-        <Route path="/ingresos" exact component={Ingresos} />
-        <Route path="/egresos" exact component={Egresos}/>
 
+        <Route path="/login" exact component={Login} />
+        <Route
+          path="/"
+          exact
+          render={props => (
+            <Dashboard
+              chartData={chartData}
+              profit={profit}
+              cost={cost}
+              income={income}
+            />
+          )}
+        />
+        <Route
+          path="/ingresos"
+          exact
+          render={props => (
+            <Ingresos header={"Ingresos"} income={income} {...props} />
+          )}
+        />
+
+<Route
+          path="/egresos"
+          exact
+          render={props => (
+            <Egresos header={"Egresos"} income={income} {...props} />
+          )}
+        />
+
+        <Route path="/charts" exact component={Chart} />
         <Route
           exact
           path="/manage/catalog/egresos/get/:id"
