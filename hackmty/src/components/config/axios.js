@@ -1,13 +1,12 @@
 let axios = require("axios");
 
-axios.defaults.baseURL = "";
+axios.defaults.baseURL = "https://moneybanks.herokuapp.com/";
 
 exports.saveImages = formData =>
   axios
     .post("images", formData)
     .then(res => res.data.data)
     .catch(err => err.message);
-
 
 exports.getData = route =>
   axios

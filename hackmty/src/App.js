@@ -9,7 +9,8 @@ import Sidebar from "./components/Sidebar/Sidebar";
 
 class App extends Component {
   state = {
-    sidebarToggle: false
+    sidebarToggle: false,
+    costs: []
   };
 
   toggleMenu = () => {

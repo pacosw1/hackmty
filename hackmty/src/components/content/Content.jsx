@@ -6,6 +6,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import { Route } from "react-router-dom";
 import Catalogo from "../Admin/js/Catalogo";
 import Form from "../Admin/js/Form";
+import Chart from "../charts/Chart";
 let fields = require("../config/fields");
 
 class Content extends Component {
@@ -27,7 +28,7 @@ class Content extends Component {
         />
         <Route path="/login" exact component={Login} />
         <Route path="/" exact component={Dashboard} />
-
+        <Route path="/charts" exact component={Chart} />
         <Route
           exact
           path="/manage/catalog/egresos/get/:id"

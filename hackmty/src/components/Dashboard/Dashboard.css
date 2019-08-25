@@ -1,0 +1,33 @@
+#dashboard {
+  display: flex;
+  width: 100%;
+
+  flex-wrap: wrap;
+}
+#dashboard {
+}
+#header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 1rem;
+}
+#header div {
+  width: 33.33%;
+  margin: 1rem 0.2rem;
+}
+
+@media only screen and (max-width: 500px) {
+  #header {
+    width: 100%;
+    flex-direction: column;
+    order: 1;
+  }
+  #header div {
+    order: 3;
+    margin: 0.2rem;
+    width: 100%;
+
+    padding: 0.5rem 1rem;
+  }
+}
