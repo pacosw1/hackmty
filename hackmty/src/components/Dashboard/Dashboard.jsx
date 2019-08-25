@@ -5,7 +5,7 @@ import { __values } from "tslib";
 import { NavLink } from "react-router-dom/cjs/react-router-dom";
 import {Link} from "react-router-dom"
 //import {Button} from "react-native";
-import {Link} from "react-router";
+//import {Link} from "react-router";
 let _ = require("lodash");
 let axios = require("../config/axios");
 
@@ -70,7 +70,7 @@ class Dashboard extends Component {
               Ir a ver Egresos
             </button>
       
-      
+
         </div>
       </div>
     );
