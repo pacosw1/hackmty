@@ -19,6 +19,7 @@ class App extends Component {
       sidebarToggle: !sidebarToggle
     });
   };
+
   render() {
     return (
       <div className="App">
@@ -28,6 +29,7 @@ class App extends Component {
       </div>
     );
   }
+  
 }
 
 export default App;
