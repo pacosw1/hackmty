@@ -6,12 +6,8 @@ import Sidebar from "../Sidebar/Sidebar";
 import { Route } from "react-router-dom";
 import Catalogo from "../Admin/js/Catalogo";
 import Form from "../Admin/js/Form";
-<<<<<<< HEAD
-import Chart from "../charts/Chart";
-=======
 import Ingresos from "../ingresos/Ingresos";
 import Egresos from "../costos/egresos";
->>>>>>> final_branch
 let fields = require("../config/fields");
 
 class Content extends Component {
@@ -33,13 +29,9 @@ class Content extends Component {
         />
         <Route path="/login" exact component={Login} />
         <Route path="/" exact component={Dashboard} />
-<<<<<<< HEAD
-        <Route path="/charts" exact component={Chart} />
-=======
         <Route path="/ingresos" exact component={Ingresos} />
         <Route path="/egresos" exact component={Egresos}/>
 
->>>>>>> final_branch
         <Route
           exact
           path="/manage/catalog/egresos/get/:id"
