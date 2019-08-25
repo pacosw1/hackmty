@@ -30,7 +30,7 @@ class Content extends Component {
         <Route path="/login" exact component={Login} />
         <Route path="/" exact component={Dashboard} />
         <Route path="/ingresos" exact component={Ingresos} />
-        <Route pathh="/egresos" exact component={Egresos}/>
+        <Route path="/egresos" exact component={Egresos}/>
 
         <Route
           exact
